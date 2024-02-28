@@ -3,7 +3,7 @@
   image: "alpine"
   command: ["/bin/sh", "-c"]
   args:
-    - cd /app/models/ && wget {{ .Values.applicationSettings.initialModel }} -O model.tar.gz
+    - cd /app/models/ && wget {{ .Values.applicationSettings.initialModel }}
   volumeMounts:
     - mountPath: /app/models
       name: models
